@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Style from './Style.css';
+import Style from '../Style.css';
 
 export default class IMC extends Component {
   constructor(props) {
