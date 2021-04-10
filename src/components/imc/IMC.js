@@ -17,7 +17,6 @@ export default class IMC extends Component {
     state.imc = imc;
     this.setState(state);
     this.categorizar();
-
   }
 
   categorizar(){
