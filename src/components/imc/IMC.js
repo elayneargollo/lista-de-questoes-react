@@ -7,6 +7,7 @@ export default class IMC extends Component {
       peso: 0,
       altura: 0,
       imc: "",
+      categoria: ""
     };
   }
 
@@ -14,6 +15,26 @@ export default class IMC extends Component {
     let state = this.state;
     let imc = state.peso / state.altura ** 2;
     state.imc = imc;
+    this.setState(state);
+    this.categorizar();
+
+  }
+
+  categorizar(){
+    let state = this.state;
+
+    if(state.imc < 25){
+        state.categoria = "Peso Normal";
+    }
+    else 
+    if(state.imc > 30){
+        state.categoria = "Obesidade";
+    }
+    else 
+    if(25 <= state.imc && state.imc <= 30){
+        state.categoria = "Sobre peso";
+    }
+
     this.setState(state);
   }
 
@@ -37,7 +58,7 @@ export default class IMC extends Component {
         />
         <button onClick={this.calcular.bind(this)}>Calcular</button>
         <br />
-        <h1>{this.state.imc}</h1>
+        <h6>Resultado: {this.state.categoria}</h6>
       </div>
     );
   }
