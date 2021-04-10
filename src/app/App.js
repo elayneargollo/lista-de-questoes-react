@@ -1,25 +1,12 @@
 import React, { Component } from 'react';
-
-import ContaRestaurante from '../components/contaRestaurante/ContaRestaurante';
-import Formulario from '../components/formulario/Formulario';
-import IMC from '../components/imc/IMC';
-import JogoDaVelha from '../components/jogaDaVelha/JogoDaVelha';
-import ZeroaCem from '../components/jogoZeroaCem/ZeroaCem';
-import ZeroaCemMelhorado from '../components/jogoZeroaCemMelhorado/ZeroaCemMelhorado';
-import QuadroMagico from '../components/quadroMagico/QuadroMagico';
+import Rotas from '../routes/Rotas';
 
 export default class App extends Component {
 
   render() {
     return (
       <React.StrictMode>
-        <ContaRestaurante />
-        <Formulario />
-        <IMC />
-        <JogoDaVelha />
-        <ZeroaCem />
-        <ZeroaCemMelhorado />
-        <QuadroMagico />
+        <Rotas />
       </React.StrictMode>
     );
   }
