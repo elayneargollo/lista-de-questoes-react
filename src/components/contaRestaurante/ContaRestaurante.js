@@ -31,7 +31,7 @@ export default class ContaRestaurante extends Component {
       <div  className="conteudo">
           <div  className="box">
           <h3> Questão 2 </h3>
-          <h5> Emitir conta restaurante </h5>
+          <h5> Emitir conta restaurante </h5><br></br>
 
         Gasto total da mesa:{" "}
           <input

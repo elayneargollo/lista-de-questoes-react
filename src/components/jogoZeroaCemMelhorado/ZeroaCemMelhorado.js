@@ -46,9 +46,9 @@ export default class ZeroaCemMelhorado extends Component {
   render() {
     return (
       <div className="conteudo">
-      <div className="box">
+      <div className="box-jogoZero">
       <h3> Questão 4</h3>
-      <h5> Jogo zero a cem </h5>
+      <h5> Jogo zero a cem </h5><br></br>
       Número:{" "}
         <input
           type="text"
