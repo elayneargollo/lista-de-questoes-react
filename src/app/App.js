@@ -5,6 +5,7 @@ import Formulario from '../components/formulario/Formulario';
 import IMC from '../components/imc/IMC';
 import JogoDaVelha from '../components/jogaDaVelha/JogoDaVelha';
 import ZeroaCem from '../components/jogoZeroaCem/ZeroaCem';
+import ZeroaCemMelhorado from '../components/jogoZeroaCemMelhorado/ZeroaCemMelhorado';
 import QuadroMagico from '../components/quadroMagico/QuadroMagico';
 
 export default class App extends Component {
@@ -17,6 +18,7 @@ export default class App extends Component {
         <IMC />
         <JogoDaVelha />
         <ZeroaCem />
+        <ZeroaCemMelhorado />
         <QuadroMagico />
       </React.StrictMode>
     );
