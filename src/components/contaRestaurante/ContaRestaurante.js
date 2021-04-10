@@ -27,37 +27,37 @@ export default class ContaRestaurante extends Component {
 
   render() {
     return (
-      <div className="restaurante">
-      <h1>Restaurante</h1>
+      <div align="center" className="row">
+      <h1>Emitir conta de uma mesa</h1>
 
-      Gasto total da mesa:{" "}
-        <input
-          type="text"
-          name="gastoTotalMesa"
-          value={this.state.gastoTotalMesa}
-          onChange={(e) => this.setState({ gastoTotalMesa: e.target.value })}
-        />
+        Gasto total da mesa:{" "}
+          <input
+            type="text"
+            name="gastoTotalMesa"
+            value={this.state.gastoTotalMesa}
+            onChange={(e) => this.setState({ gastoTotalMesa: e.target.value })}
+          />
 
-        Número de pessoas sentadas:{" "}
-        <input
-          type="text"
-          name="numeroDePessoasSentadas"
-          value={this.state.numeroDePessoasSentadas}
-          onChange={(e) => this.setState({ numeroDePessoasSentadas: e.target.value })}
-        />
+          Número de pessoas sentadas:{" "}
+          <input
+            type="text"
+            name="numeroDePessoasSentadas"
+            value={this.state.numeroDePessoasSentadas}
+            onChange={(e) => this.setState({ numeroDePessoasSentadas: e.target.value })}
+          />
 
-        Porcentagem gorjeta garçom:{" "}
-        <input
-          type="text"
-          name="porcentualPagoGorjeta"
-          value={this.state.porcentualPagoGorjeta}
-          onChange={(e) => this.setState({ porcentualPagoGorjeta: e.target.value })}
-        />
+          Porcentagem gorjeta garçom:{" "}
+          <input
+            type="text"
+            name="porcentualPagoGorjeta"
+            value={this.state.porcentualPagoGorjeta}
+            onChange={(e) => this.setState({ porcentualPagoGorjeta: e.target.value })}
+          />
 
-        <button onClick={this.emitirNota.bind(this)}>Emitir Nota</button>
-        <br />
-        <h6>Total a ser pago: R$ {this.state.totalGeral}</h6>
-        <h6>Valor por pessoa: R$ {this.state.totalPorPessoa}</h6>
+          <button class="btn waves-effect waves-light" onClick={this.emitirNota.bind(this)}>Emitir Nota</button>
+          <br />
+          <h6>Total a ser pago: R$ {this.state.totalGeral}</h6>
+          <h6>Valor por pessoa: R$ {this.state.totalPorPessoa}</h6>
 
       </div>
     );

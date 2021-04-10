@@ -41,7 +41,7 @@ export default class ZeroaCem extends Component {
 
   render() {
     return (
-      <div className="ZeroaCem">
+      <div align="center" className="ZeroaCem">
       <h1>Zero a Cem</h1>
       Número:{" "}
         <input
@@ -50,7 +50,7 @@ export default class ZeroaCem extends Component {
           value={this.state.numeroEscolhidoPeloUsuario}
           onChange={(e) => this.setState({ numeroEscolhidoPeloUsuario: e.target.value })}
         />
-        <button onClick={this.sortearNumero.bind(this)}>Sortear Numero</button>
+        <button class="btn waves-effect waves-light" onClick={this.sortearNumero.bind(this)}>Sortear Numero</button>
         <br />
         <h6>Resultado: {this.state.result}</h6>
       </div>

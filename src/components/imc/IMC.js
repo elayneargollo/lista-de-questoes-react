@@ -39,7 +39,7 @@ export default class IMC extends Component {
 
   render() {
     return (
-      <div className="imc">
+      <div align="center" className="imc">
         <h1> IMC </h1>
         Peso:{" "}
         <input
@@ -55,7 +55,7 @@ export default class IMC extends Component {
           value={this.state.altura}
           onChange={(e) => this.setState({ altura: e.target.value })}
         />
-        <button onClick={this.calcular.bind(this)}>Calcular</button>
+        <button class="btn waves-effect waves-light" onClick={this.calcular.bind(this)}>Calcular</button>
         <br />
         <h6>Resultado: {this.state.categoria}</h6>
       </div>
