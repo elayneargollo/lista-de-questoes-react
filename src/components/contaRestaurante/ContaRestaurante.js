@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Style from './Style.css';
 
 export default class ContaRestaurante extends Component {
 
@@ -27,8 +28,10 @@ export default class ContaRestaurante extends Component {
 
   render() {
     return (
-      <div align="center" className="row">
-      <h1>Emitir conta de uma mesa</h1>
+      <div  className="conteudo">
+          <div  className="box">
+          <h3> Questão 2 </h3>
+          <h5> Emitir conta restaurante </h5>
 
         Gasto total da mesa:{" "}
           <input
@@ -58,7 +61,7 @@ export default class ContaRestaurante extends Component {
           <br />
           <h6>Total a ser pago: R$ {this.state.totalGeral}</h6>
           <h6>Valor por pessoa: R$ {this.state.totalPorPessoa}</h6>
-
+          </div>
       </div>
     );
   }

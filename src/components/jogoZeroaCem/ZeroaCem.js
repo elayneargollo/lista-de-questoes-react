@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Style from './Style.css';
 
 export default class ZeroaCem extends Component {
   constructor(props) {
@@ -41,8 +42,10 @@ export default class ZeroaCem extends Component {
 
   render() {
     return (
-      <div align="center" className="ZeroaCem">
-      <h1>Zero a Cem</h1>
+      <div className="conteudo">
+      <div className="box">
+      <h3> Questão 3</h3>
+      <h5> Jogo zero a cem </h5>
       Número:{" "}
         <input
           type="text"
@@ -53,6 +56,7 @@ export default class ZeroaCem extends Component {
         <button class="btn waves-effect waves-light" onClick={this.sortearNumero.bind(this)}>Sortear Numero</button>
         <br />
         <h6>Resultado: {this.state.result}</h6>
+        </div>
       </div>
     );
   }

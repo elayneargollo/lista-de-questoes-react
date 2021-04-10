@@ -1,0 +1,19 @@
+.conteudo {
+  width: 100vw;
+  height: 100vh;
+  background: #ffcbdb;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 400px;
+  height: 550px;
+  background: #ff6f9c;
+  border: 1px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 40px;
+}

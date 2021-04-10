@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Style from './Style.css';
 
 export default class IMC extends Component {
   constructor(props) {
@@ -39,8 +40,10 @@ export default class IMC extends Component {
 
   render() {
     return (
-      <div align="center" className="imc">
-        <h1> IMC </h1>
+      <div  className="conteudo">
+      <div  className="box">
+      <h3> Questão 1 </h3>
+      <h5> Calcular IMC </h5>
         Peso:{" "}
         <input
           type="text"
@@ -58,6 +61,7 @@ export default class IMC extends Component {
         <button class="btn waves-effect waves-light" onClick={this.calcular.bind(this)}>Calcular</button>
         <br />
         <h6>Resultado: {this.state.categoria}</h6>
+        </div>
       </div>
     );
   }

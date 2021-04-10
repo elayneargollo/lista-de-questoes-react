@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Style from './Style.css';
 
 export default class ZeroaCemMelhorado extends Component {
   constructor(props) {
@@ -44,8 +45,10 @@ export default class ZeroaCemMelhorado extends Component {
 
   render() {
     return (
-      <div align="center" className="ZeroaCem">
-      <h1>Zero a Cem Melhorado </h1>
+      <div className="conteudo">
+      <div className="box">
+      <h3> Questão 4</h3>
+      <h5> Jogo zero a cem </h5>
       Número:{" "}
         <input
           type="text"
@@ -57,6 +60,7 @@ export default class ZeroaCemMelhorado extends Component {
         <br />
         <h6>Resultado: {this.state.result}</h6>
         <h6>Quantidade de tentativas: {this.state.quantidadeTentativas}</h6>
+        </div>
       </div>
     );
   }
