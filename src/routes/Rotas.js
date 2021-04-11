@@ -7,6 +7,7 @@ import JogoDaVelha from '../components/jogaDaVelha/JogoDaVelha';
 import ZeroaCem from '../components/jogoZeroaCem/ZeroaCem';
 import ZeroaCemMelhorado from '../components/jogoZeroaCemMelhorado/ZeroaCemMelhorado';
 import QuadroMagico from '../components/quadroMagico/QuadroMagico';
+import Home from '../components/home/Home';
 
 function Rotas() {
   
@@ -20,6 +21,7 @@ function Rotas() {
         <Route exact path="/questao5" component={Formulario} />
         <Route exact path="/questao6" component={JogoDaVelha} />
         <Route exact path="/questao7" component={QuadroMagico} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </BrowserRouter>
   );
