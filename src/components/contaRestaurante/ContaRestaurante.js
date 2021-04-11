@@ -15,6 +15,11 @@ export default class ContaRestaurante extends Component {
     };
   }
 
+  handleClick() {
+    this.emitirNota();
+    this.emitirResposta();
+  }
+
   emitirNota() {
     let state = this.state;
     
@@ -25,7 +30,6 @@ export default class ContaRestaurante extends Component {
     state.totalPorPessoa = totalPorPessoa;
 
     this.setState(state);
-    this.emitirResposta();
 
   }
 
@@ -66,7 +70,7 @@ export default class ContaRestaurante extends Component {
             onChange={(e) => this.setState({ porcentualPagoGorjeta: e.target.value })}
           />
 
-          <button class="btn waves-effect waves-light" onClick={this.emitirNota.bind(this)}>Emitir Nota</button>
+          <button class="btn waves-effect waves-light" onClick={this.handleClick.bind(this)}>Emitir Nota</button>
           <br />
           </div>
       </div>

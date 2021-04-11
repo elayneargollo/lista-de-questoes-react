@@ -13,6 +13,13 @@ export default class ZeroaCemMelhorado extends Component {
     };
   }
 
+  
+  handleClick() {
+    this.sortearNumero();
+    this.compararNumeros();
+    this.emitirResposta();
+  }
+
   sortearNumero(){
     let state = this.state;
     let numeroGerado = Math.random() * (100 - 0) + 0;
@@ -20,8 +27,6 @@ export default class ZeroaCemMelhorado extends Component {
     state.numeroGerado = numeroGerado;
     
     this.setState(state);
-    this.compararNumeros();
-    this.emitirResposta();
   }
 
   compararNumeros()
@@ -63,7 +68,7 @@ export default class ZeroaCemMelhorado extends Component {
           value={this.state.numeroEscolhidoPeloUsuario}
           onChange={(e) => this.setState({ numeroEscolhidoPeloUsuario: e.target.value })}
         />
-        <button class="btn waves-effect waves-light" onClick={this.sortearNumero.bind(this)}>Sortear Numero</button>
+        <button class="btn waves-effect waves-light" onClick={this.handleClick.bind(this)}>Sortear Numero</button>
         <br />
         </div>
       </div>

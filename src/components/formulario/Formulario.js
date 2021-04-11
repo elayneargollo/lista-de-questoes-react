@@ -12,8 +12,7 @@ export default class Formulario extends Component {
     };
   }
 
-  apresentarNaTela(){
-    let state = this.state;
+  handleClick() {
     this.converterSalario();
     this.emitirResposta();
   }
@@ -107,7 +106,7 @@ export default class Formulario extends Component {
           value={this.state.salario}
           onChange={(e) => this.setState({ salario: e.target.value })}
         />
-        <button class="btn waves-effect waves-light" onClick={this.apresentarNaTela.bind(this)}>Apresentar</button>        
+        <button class="btn waves-effect waves-light" onClick={this.handleClick.bind(this)}>Apresentar</button>        
         </div>
       </div>
     );

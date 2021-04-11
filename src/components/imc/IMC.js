@@ -13,13 +13,19 @@ export default class IMC extends Component {
     };
   }
 
+  handleClick() {
+    this.calcular();
+    this.categorizar();
+    this.emitirResposta();
+  }
+
   calcular() {
+
     let state = this.state;
     let imc = state.peso / state.altura ** 2;
     state.imc = imc;
     this.setState(state);
-    this.categorizar();
-    this.emitirResposta();
+  
   }
 
   categorizar(){
@@ -66,7 +72,7 @@ export default class IMC extends Component {
           value={this.state.altura}
           onChange={(e) => this.setState({ altura: e.target.value })}
         />
-        <button class="btn waves-effect waves-light" onClick={this.calcular.bind(this)}>Calcular</button>
+        <button class="btn waves-effect waves-light" onClick={this.handleClick.bind(this)}>Calcular</button>
         </div>
       </div>
     );

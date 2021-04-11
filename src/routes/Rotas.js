@@ -11,6 +11,7 @@ import QuadroMagico from '../components/quadroMagico/QuadroMagico';
 import Home from '../components/home/Home';
 
 export const paths = require('./Paths');
+
 function Rotas() {
   
   return (

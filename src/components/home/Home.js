@@ -10,6 +10,7 @@ export default class IMC extends Component {
                     width: '100%',
                     height: '100%',
                   }}>
+
             </img>
           </div>
         );
