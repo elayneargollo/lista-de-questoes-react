@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Style from '../Style.css';
+import swal from 'sweetalert';
 
 export default class ContaRestaurante extends Component {
 
@@ -24,7 +25,14 @@ export default class ContaRestaurante extends Component {
     state.totalPorPessoa = totalPorPessoa;
 
     this.setState(state);
+    this.emitirResposta();
 
+  }
+
+  emitirResposta()
+  {
+    swal("Processado com sucesso", 
+    `Total a ser pago: R$ ${this.state.totalGeral}\n Valor por pessoa: R$ ${this.state.totalPorPessoa} `, "success");
   }
 
   render() {
@@ -60,8 +68,6 @@ export default class ContaRestaurante extends Component {
 
           <button class="btn waves-effect waves-light" onClick={this.emitirNota.bind(this)}>Emitir Nota</button>
           <br />
-          <h6>Total a ser pago: R$ {this.state.totalGeral}</h6>
-          <h6>Valor por pessoa: R$ {this.state.totalPorPessoa}</h6>
           </div>
       </div>
     );

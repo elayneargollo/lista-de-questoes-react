@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
 import Style from '../Style.css';
 
 export default class ZeroaCem extends Component {
@@ -19,6 +20,7 @@ export default class ZeroaCem extends Component {
     
     this.setState(state);
     this.compararNumeros();
+    this.emitirResposta();
   }
 
   compararNumeros()
@@ -40,6 +42,11 @@ export default class ZeroaCem extends Component {
     this.setState(state);
   }
 
+  emitirResposta()
+  {
+    swal("Processado com sucesso", `Resultado: ${this.state.result}`, "success");
+  }
+
   render() {
     return (
       <div className="conteudo">
@@ -55,7 +62,6 @@ export default class ZeroaCem extends Component {
         />
         <button class="btn waves-effect waves-light" onClick={this.sortearNumero.bind(this)}>Sortear Numero</button>
         <br />
-        <h6>Resultado: {this.state.result}</h6>
         </div>
       </div>
     );

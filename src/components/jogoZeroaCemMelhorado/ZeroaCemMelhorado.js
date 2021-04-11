@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
 import Style from '../Style.css';
 
 export default class ZeroaCemMelhorado extends Component {
@@ -20,6 +21,7 @@ export default class ZeroaCemMelhorado extends Component {
     
     this.setState(state);
     this.compararNumeros();
+    this.emitirResposta();
   }
 
   compararNumeros()
@@ -43,6 +45,11 @@ export default class ZeroaCemMelhorado extends Component {
     this.setState(state);
   }
 
+  emitirResposta()
+  {
+    swal("Processado com sucesso", `Resultado: ${this.state.result}\n Quantidade de tentativas: ${this.state.quantidadeTentativas}`, "success");
+  }
+
   render() {
     return (
       <div className="conteudo">
@@ -58,8 +65,6 @@ export default class ZeroaCemMelhorado extends Component {
         />
         <button class="btn waves-effect waves-light" onClick={this.sortearNumero.bind(this)}>Sortear Numero</button>
         <br />
-        <h6>Resultado: {this.state.result}</h6>
-        <h6>Quantidade de tentativas: {this.state.quantidadeTentativas}</h6>
         </div>
       </div>
     );

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import swal from 'sweetalert';
 
 export default class Formulario extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ export default class Formulario extends Component {
   apresentarNaTela(){
     let state = this.state;
     this.converterSalario();
+    this.emitirResposta();
   }
 
   converterSalario(){
@@ -73,6 +75,10 @@ export default class Formulario extends Component {
     this.setState(state);	
   }
 
+  emitirResposta()
+  {
+    swal("Processado com sucesso", `Salário: ${this.state.salarioPorExtenso}\n CPF: ${this.state.cpf}\n Nome: ${this.state.nome}`, "success");
+  }
     render() {
     return (
       <div  className="conteudo">
@@ -101,12 +107,7 @@ export default class Formulario extends Component {
           value={this.state.salario}
           onChange={(e) => this.setState({ salario: e.target.value })}
         />
-        <button class="btn waves-effect waves-light" onClick={this.apresentarNaTela.bind(this)}>Apresentar</button>
-
-        <h6>Salario: {this.state.salarioPorExtenso}</h6>
-        <h6>CPF: {this.state.cpf}</h6>
-        <h6>Nome: {this.state.nome}</h6>
-        
+        <button class="btn waves-effect waves-light" onClick={this.apresentarNaTela.bind(this)}>Apresentar</button>        
         </div>
       </div>
     );

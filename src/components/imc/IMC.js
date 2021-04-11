@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Style from '../Style.css';
+import swal from 'sweetalert';
 
 export default class IMC extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class IMC extends Component {
     state.imc = imc;
     this.setState(state);
     this.categorizar();
+    this.emitirResposta();
   }
 
   categorizar(){
@@ -36,6 +38,11 @@ export default class IMC extends Component {
     }
 
     this.setState(state);
+  }
+
+  emitirResposta()
+  {
+    swal("Processado com sucesso", `Resultado: ${this.state.categoria}`, "success");
   }
 
   render() {
@@ -60,7 +67,6 @@ export default class IMC extends Component {
           onChange={(e) => this.setState({ altura: e.target.value })}
         />
         <button class="btn waves-effect waves-light" onClick={this.calcular.bind(this)}>Calcular</button>
-        <h6>Resultado: {this.state.categoria}</h6>
         </div>
       </div>
     );
