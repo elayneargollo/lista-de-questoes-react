@@ -18,6 +18,16 @@
   padding: 30px;
 }
 
+.box-jogo {
+  width: 400px;
+  height: 600px;
+  background-color:#ee6e73;
+  border: 1px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px;
+}
+
 .box-jogoZero{
   width: 400px;
   height: 390px;
