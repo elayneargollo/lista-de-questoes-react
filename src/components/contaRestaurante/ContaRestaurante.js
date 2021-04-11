@@ -36,7 +36,9 @@ export default class ContaRestaurante extends Component {
   emitirResposta()
   {
     swal("Processado com sucesso", 
-    `Total a ser pago: R$ ${this.state.totalGeral}\n Valor por pessoa: R$ ${this.state.totalPorPessoa} `, "success");
+        `Total a ser pago: R$ ${this.state.totalGeral}\n 
+        Valor por pessoa: R$ ${this.state.totalPorPessoa} `, 
+        "success");
   }
 
   render() {
