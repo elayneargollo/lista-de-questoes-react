@@ -37,3 +37,49 @@
   text-align: center;
   padding: 30px;
 }
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #ffecee;
+  border: 1px solid #ee6e73;
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 40px;
+  height: 90px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 110px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ECF6FF;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
