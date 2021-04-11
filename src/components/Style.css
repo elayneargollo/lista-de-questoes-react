@@ -1,7 +1,7 @@
 .conteudo {
   width: 100vw;
   height: 100vh;
-  background: #ffcbdb;
+  background: #ECF6FF;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,7 +11,7 @@
 .box {
   width: 400px;
   height: 550px;
-  background: #ee6e73;
+  background-color:#ee6e73;
   border: 1px;
   border-radius: 20px;
   text-align: center;

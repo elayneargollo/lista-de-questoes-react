@@ -9,6 +9,7 @@ import ZeroaCem from '../components/jogoZeroaCem/ZeroaCem';
 import ZeroaCemMelhorado from '../components/jogoZeroaCemMelhorado/ZeroaCemMelhorado';
 import QuadroMagico from '../components/quadroMagico/QuadroMagico';
 import Home from '../components/home/Home';
+import jogoDaVelha from '../components/jogaDaVelha/JogoDaVelha';
 
 export const paths = require('./Paths');
 
@@ -22,8 +23,8 @@ function Rotas() {
         <Route exact path={paths.questao3} component={ZeroaCem} />
         <Route exact path={paths.questao4}component={ZeroaCemMelhorado} />
         <Route exact path={paths.questao5} component={Formulario} />
-        <Route exact path={paths.questao6} component={JogoDaVelha} />
-        <Route exact path={paths.questao7} component={QuadroMagico} />
+        <Route exact path={paths.questao6} component={QuadroMagico} />
+        <Route exact path={paths.questao7} component={jogoDaVelha} />
         <Route exact path={paths.root} component={Home} />
       </Switch>
     </BrowserRouter>

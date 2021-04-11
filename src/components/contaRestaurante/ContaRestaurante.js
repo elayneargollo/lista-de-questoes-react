@@ -7,9 +7,9 @@ export default class ContaRestaurante extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      gastoTotalMesa: 0,
-      numeroDePessoasSentadas: 0,
-      porcentualPagoGorjeta: 0,
+      gastoTotalMesa: "",
+      numeroDePessoasSentadas: "",
+      porcentualPagoGorjeta: "",
       totalGeral: "",
       totalPorPessoa: "",
     };
@@ -22,29 +22,28 @@ export default class ContaRestaurante extends Component {
 
   emitirNota() {
     let state = this.state;
-    
-    let totalGeral = Number(state.gastoTotalMesa) + Number(state.gastoTotalMesa * (state.porcentualPagoGorjeta/100));
+
+    let totalGeral = Number(state.gastoTotalMesa) + Number(state.gastoTotalMesa * (state.porcentualPagoGorjeta / 100));
     state.totalGeral = totalGeral;
 
-    let totalPorPessoa =  totalGeral/state.numeroDePessoasSentadas;
+    let totalPorPessoa = totalGeral / state.numeroDePessoasSentadas;
     state.totalPorPessoa = totalPorPessoa;
 
     this.setState(state);
 
   }
 
-  emitirResposta()
-  {
-    swal("Processado com sucesso", 
-        `Total a ser pago: R$ ${this.state.totalGeral}\n 
-        Valor por pessoa: R$ ${this.state.totalPorPessoa} `, 
-        "success");
+  emitirResposta() {
+    swal("Processado com sucesso",
+      `Total a ser pago: R$ ${this.state.totalGeral}\n 
+        Valor por pessoa: R$ ${this.state.totalPorPessoa} `,
+      "success");
   }
 
   render() {
     return (
-      <div  className="conteudo">
-          <div  className="box">
+      <div className="conteudo">
+        <div className="box">
           <h3> Questão 2 </h3>
           <h5> Emitir conta restaurante </h5><br></br>
 
@@ -71,10 +70,9 @@ export default class ContaRestaurante extends Component {
             value={this.state.porcentualPagoGorjeta}
             onChange={(e) => this.setState({ porcentualPagoGorjeta: e.target.value })}
           />
-
           <button class="btn waves-effect waves-light" onClick={this.handleClick.bind(this)}>Emitir Nota</button>
           <br />
-          </div>
+        </div>
       </div>
     );
   }
