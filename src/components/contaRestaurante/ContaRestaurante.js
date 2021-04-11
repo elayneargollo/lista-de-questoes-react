@@ -24,6 +24,7 @@ export default class ContaRestaurante extends Component {
     state.totalPorPessoa = totalPorPessoa;
 
     this.setState(state);
+
   }
 
   render() {
