@@ -16,8 +16,19 @@ export default class ContaRestaurante extends Component {
   }
 
   handleClick() {
-    this.emitirNota();
-    this.emitirResposta();
+
+    var error = validationField(this.state.porcentualPagoGorjeta, this.state.gastoTotalMesa, this.state.numeroDePessoasSentadas);
+    
+    if(error){
+      swal("Houve um error",
+      ` ${error} `,"error");
+    }
+
+    else {
+      this.emitirNota();
+      this.emitirResposta();
+    }
+
   }
 
   emitirNota() {
@@ -76,5 +87,25 @@ export default class ContaRestaurante extends Component {
       </div>
     );
   }
+}
+
+function validationField(porcentualPagoGorjeta, gastoTotalMesa, numeroDePessoasSentadas){
+
+  var error = "";
+
+    if(!porcentualPagoGorjeta)
+    {
+      error = "Preencha o porcentual pago de gorjeta";
+    }  
+    if(!gastoTotalMesa)
+    {
+      error = "Preencha o gasto total da mesa";
+    }
+    if(!numeroDePessoasSentadas)
+    {
+      error = "Preencha o numero de pessoas sentadas";
+    }
+
+   return error;
 }
 

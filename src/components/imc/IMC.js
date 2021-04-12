@@ -14,9 +14,19 @@ export default class IMC extends Component {
   }
 
   handleClick() {
-    this.calcular();
-    this.categorizar();
-    this.emitirResposta();
+
+    var error = validationField(this.state.peso, this.state.altura);
+
+    if(error)
+    {
+      swal("Ocorreu um erro", `${error}`, "error");
+    }
+
+    else {
+      this.calcular();
+      this.categorizar();
+      this.emitirResposta();
+    }
   }
 
   calcular() {
@@ -77,4 +87,20 @@ export default class IMC extends Component {
       </div>
     );
   }
+}
+
+function validationField(peso, altura){
+
+  var error = "";
+
+    if(!peso)
+    {
+      error = "Preencha o peso";
+    }  
+    if(!altura)
+    {
+      error = "Preencha a altura";
+    }
+
+   return error;
 }
