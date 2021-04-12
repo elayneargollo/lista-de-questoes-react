@@ -9,8 +9,8 @@ import ZeroaCemMelhorado from '../pages/jogoZeroaCemMelhorado/ZeroaCemMelhorado'
 import QuadroMagico from '../pages/quadroMagico/QuadroMagico';
 import Home from '../pages/home/Home';
 import jogoDaVelha from '../pages/jogaDaVelha/JogoDaVelha';
-import Nav from '../components/nav/nav';
-import Footer from '../components/footer/footer';
+import Nav from '../components/nav/Nav';
+import Footer from '../components/footer/Footer';
 
 export const paths = require('./Paths');
 
