@@ -13,8 +13,17 @@ export default class Formulario extends Component {
   }
 
   handleClick() {
-    this.converterSalario();
-    this.emitirResposta();
+
+    var error = validationField(this.state.salario, this.state.nome, this.state.cpf);
+
+    if(error){
+      swal("Houve um erro", `${error}`, "error");
+    }
+    else{
+      this.converterSalario();
+      this.emitirResposta();
+    }
+
   }
 
   converterSalario(){
@@ -78,7 +87,8 @@ export default class Formulario extends Component {
   {
     swal("Processado com sucesso", `Salário: ${this.state.salarioPorExtenso}\n CPF: ${this.state.cpf}\n Nome: ${this.state.nome}`, "success");
   }
-    render() {
+
+  render() {
     return (
       <div  className="conteudo">
       <div  className="box">
@@ -113,3 +123,22 @@ export default class Formulario extends Component {
   }
 }
 
+function validationField(salario, nome, cpf){
+
+  var error = "";
+
+    if(!salario)
+    {
+      error = "Preencha o valor do salário";
+    }  
+    if(!nome)
+    {
+      error = "Preencha o nome";
+    }  
+    if(!cpf)
+    {
+      error = "Preencha o CPF";
+    }  
+
+   return error;
+}

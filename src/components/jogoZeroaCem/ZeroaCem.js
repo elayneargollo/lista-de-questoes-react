@@ -13,9 +13,17 @@ export default class ZeroaCem extends Component {
   }
 
   handleClick() {
-    this.sortearNumero();
-    this.compararNumeros();
-    this.emitirResposta();
+
+    var error = validationField(this.state.numeroEscolhidoPeloUsuario);
+
+    if (error){
+      swal("Ocorreu um erro", `${error}`, "error");
+    }
+    else{
+      this.sortearNumero();
+      this.compararNumeros();
+      this.emitirResposta();
+    }
   }
 
   sortearNumero(){
@@ -72,4 +80,17 @@ export default class ZeroaCem extends Component {
     );
   }
 }
+
+function validationField(numero){
+
+  var error = "";
+
+    if(!numero)
+    {
+      error = "Preencha o número";
+    }  
+
+   return error;
+}
+
 
