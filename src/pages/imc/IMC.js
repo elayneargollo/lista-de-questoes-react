@@ -62,6 +62,7 @@ export default class IMC extends Component {
   }
 
   render() {
+    
     return (
       <div  className="conteudo">
       <div  className="box-imc">

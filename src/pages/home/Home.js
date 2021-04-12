@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PlanoDeFundo from './images/fundo.webp';
+import PlanoDeFundo from '../../assets/img/fundo.webp';
 
 export default class IMC extends Component {
     render() {

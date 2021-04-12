@@ -52,6 +52,7 @@ export default class ContaRestaurante extends Component {
   }
 
   render() {
+    
     return (
       <div className="conteudo">
         <div className="box">
