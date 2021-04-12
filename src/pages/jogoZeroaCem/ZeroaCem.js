@@ -7,7 +7,7 @@ export default class ZeroaCem extends Component {
     super(props);
     this.state = {
       numeroEscolhidoPeloUsuario: 0,
-      numeroGerado: 0,
+      numeroGerado: Math.floor(Math.random() * 100),
       result:  ""
     };
   }
@@ -20,25 +20,15 @@ export default class ZeroaCem extends Component {
       swal("Ocorreu um erro", `${error}`, "error");
     }
     else{
-      this.sortearNumero();
       this.compararNumeros();
       this.emitirResposta();
     }
   }
 
-  sortearNumero(){
-
-    let state = this.state;
-    let numeroGerado = Math.random() * (100 - 0) + 0;
-  
-    state.numeroGerado = numeroGerado;
-    
-    this.setState(state);
-  }
-
   compararNumeros()
   {
     let state = this.state;
+    console.log(Number(state.numeroGerado))
   
     if(Number(state.numeroEscolhidoPeloUsuario) === Number(state.numeroGerado)){
       state.result = "Você acertou";
